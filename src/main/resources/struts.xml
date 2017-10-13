@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NOME DO ARQUIVO TEM QUE SER ESSE E NESSE LOCAL -->
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Conjunto de actions e paginas jsp que se relacionam -->
+	<package name="teste" namespace="/Teste" extends="struts-default">
+		<action name="FazerLogin">
+			<result>pages/login.jsp</result>
+		</action>
+		<action name="Login" class="br.com.treinaweb.teste.struts2.login.actions.LoginAction"> <!-- Name definido na pagina login.jsp -->
+			<result name="SUCESSO">pages/sucesso.jsp</result> <!-- Name definido na classe LoginAction -->
+			<result name="ERRO">pages/erro.jsp</result>		  <!-- Name definido na classe LoginAction -->
+		</action>
+	</package>
+</struts>
